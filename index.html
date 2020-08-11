@@ -8,31 +8,24 @@
   <meta name="description" content="StavZDev Site">
   <meta name="keywords" content="StavZDev, StavZ, Vexond, Vexond Team, stavzdev site">
   <meta name="author" content="StavZDev">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>StavZDev's Website</title>
   <link rel="icon" href="img/site_icon.png">
 
   <!-- Styles -->
 
-  <!-- <link rel="stylesheet" href="style/style.css"> -->
-  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <!-- Scripts -->
-
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="js/jquery.min.js" type="text/javascript"></script>
-  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
   <script>
-    var main = function () {
-      $('.dropdown-toggle').click(function () {
-        $('.dropdrown-menu').toggle();
-      });
-    };
-
-    $(document).ready(main);
-  </script>
-  <script>
+    console.log(document.getElementsByClassName('loader-wrapper'))
     $(window).on("load", () => {
       $(".loader-wrapper").fadeOut("slow");
     });
@@ -117,30 +110,9 @@
 
     /*! Preloader end */
 
-    .dropdown-menu {
-      color: #F5F5F5;
-      background-color: #212121;
-    }
-
-    .dropdown-item {
-      color: #f5f5f5;
-    }
-
-    .dropdown-item:hover,
-    .dropdown-item:focus {
-      color: #f5f5f5;
-      background-color: rgba(244, 67, 54, 0.5);
-    }
-
-    .dropdown-item.active,
-    .dropdown-item:active {
-      color: #fff;
-      background-color: #f44336;
-    }
-
     body {
-      font-family: 'Recursive' !important;
-      background-image: url("img/site-background.png");
+      font-family: 'Recursive' sans-serif;
+      background-image: url("img/site-background-4k.png");
     }
 
     .container {
@@ -155,16 +127,37 @@
 
     /*! navbar */
 
-    /* nav.tranparent {
-    border: none !important;
-    background-color: rgba(0,0,0,0) !important;
-} */
+    nav.tranparent {
+      border: none ;
+      background-color: rgba(0, 0, 0, 0);
+    }
 
-    .navbar-nav.navbar-center {
-      margin-top: 30px;
+
+    .navbar-nav {
+      text-align: center;
+    }
+
+    li {
+      text-align: center;
+      float: none;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      color: #fff;
       position: absolute;
-      left: 50%;
-      transform: translatex(-50%);
+      bottom: 0;
+      width: 100%;
+      height: 2.1rem;
+      font-size: 12px;
+      padding: 0;
+      border: none;
+    }
+    @media (min-width: 768) {
+      body {
+        scale: 150%;
+      }
     }
   </style>
 </head>
@@ -176,27 +169,27 @@
   </div>
 
   <div class="container">
-    <nav class="navbar transparent navbar-expand-md">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a href="https://stavzdev.xyz" class="navbar-brand">StavZDev</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav navbar-center">
+      <div class="navbar-collapse collapse" id="navbarSupportedContent" style="width: 40px;">
+        <ul class="nav navbar-nav mr-auto navbar-center">
           <li class="nav-item active">
             <a class="nav-link active" href="#">Home</a>
           </li>
-          <a class="nav-link dropdown-toggle" href="#" id="projects" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">Projects</a>
-          <div class="dropdown-menu" aria-labelledby="projects">
-            <a class="dropdown-item" href="/vexond/">Vexond</a>
-          </div>
+          <li class="navbar-nav"><a href="projects/index.html" class="nav-link">Projects</a></li>
           <li class="navbar-nav"><a class="nav-link" href="/about/">About</a></li>
         </ul>
       </div>
     </nav>
   </div>
+  <footer>
+    <p>Copyright <span class="iconify" data-icon="bx:bx-copyright" data-inline="false"></span> 2020 StavZDev</p>
+  </footer>
 </body>
 
 </html>
