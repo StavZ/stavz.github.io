@@ -2,194 +2,213 @@
 <html lang="en">
 
 <head>
-  <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>StavZDev's Website</title>
+    <link rel="icon" href="img/site_icon.png">
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        console.log(document.getElementsByClassName('loader-wrapper'))
+        $(window).on("load", () => {
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+    <style type="text/css">
+        /*! Preloader */
 
-  <meta charset="utf-8">
-  <meta name="description" content="StavZDev Site">
-  <meta name="keywords" content="StavZDev, StavZ, Vexond, Vexond Team, stavzdev site">
-  <meta name="author" content="StavZDev">
-  <title>StavZDev's Website</title>
-  <link rel="icon" href="img/site_icon.png">
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #252525;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
 
-  <!-- Styles -->
+        .loader {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            border: 4px solid #Fff;
+            animation: loader 2s infinite ease;
+        }
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        .loader-inner {
+            vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            background-color: #fff;
+            animation: loader-inner 2s infinite ease-in;
+        }
 
-  <!-- Scripts -->
-  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
-  <script>
-    console.log(document.getElementsByClassName('loader-wrapper'))
-    $(window).on("load", () => {
-      $(".loader-wrapper").fadeOut("slow");
-    });
-  </script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
-    /*! Preloader */
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
 
-    .loader-wrapper {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #252525;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 2;
-    }
+            25% {
+                transform: rotate(180deg);
+            }
 
-    .loader {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      position: relative;
-      border: 4px solid #Fff;
-      animation: loader 2s infinite ease;
-    }
+            50% {
+                transform: rotate(180deg);
+            }
 
-    .loader-inner {
-      vertical-align: top;
-      display: inline-block;
-      width: 100%;
-      background-color: #fff;
-      animation: loader-inner 2s infinite ease-in;
-    }
+            75% {
+                transform: rotate(360deg);
+            }
 
-    @keyframes loader {
-      0% {
-        transform: rotate(0deg);
-      }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-      25% {
-        transform: rotate(180deg);
-      }
+        @keyframes loader-inner {
+            0% {
+                height: 0%;
+            }
 
-      50% {
-        transform: rotate(180deg);
-      }
+            25% {
+                height: 0%;
+            }
 
-      75% {
-        transform: rotate(360deg);
-      }
+            50% {
+                height: 100%;
+            }
 
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+            75% {
+                height: 100%;
+            }
 
-    @keyframes loader-inner {
-      0% {
-        height: 0%;
-      }
+            100% {
+                height: 0%;
+            }
+        }
 
-      25% {
-        height: 0%;
-      }
+        body {
+            background-image: url('img/site-background-4k.png');
+            color: #bbbbbb
+        }
 
-      50% {
-        height: 100%;
-      }
+        a {
+            color: #444444
+        }
 
-      75% {
-        height: 100%;
-      }
-
-      100% {
-        height: 0%;
-      }
-    }
-
-    /*! Preloader end */
-
-    body {
-      font-family: 'Recursive' sans-serif;
-      background-image: url("img/site-background-4k.png");
-    }
-
-    .container {
-      width: 70%;
-    }
-
-    a,
-    a:focus,
-    a:hover {
-      color: #fff !important;
-    }
-
-    /*! navbar */
-
-    nav.tranparent {
-      border: none ;
-      background-color: rgba(0, 0, 0, 0);
-    }
+        a:hover {
+            color: #af75d7;
+            text-decoration: none;
+        }
 
 
-    .navbar-nav {
-      text-align: center;
-    }
+        .brand-text {
+            fill: #333;
+        }
 
-    li {
-      text-align: center;
-      float: none;
-      display: inline-block;
-    }
+        .brand-main {
+            fill: #af75d7;
+        }
 
-    footer {
-      text-align: center;
-      color: #fff;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 2.1rem;
-      font-size: 12px;
-      padding: 0;
-      border: none;
-    }
-    @media (min-width: 768) {
-      body {
-        scale: 150%;
-      }
-    }
-  </style>
+        .nav-masthead .nav-link {
+            font-weight: 500;
+            color: #9E9E9E;
+        }
+
+        .nav-masthead .active {
+            color: #cacaca;
+        }
+
+        .nav-masthead .nav-link:hover,
+        .nav-masthead .nav-link:focus {
+            color: #af75d7;
+            border-bottom: none;
+        }
+
+        .social a {
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 100%;
+            line-height: 2.5rem;
+            color: #bbbbbb;
+            font-size: 20px;
+        }
+
+        .social a:hover {
+            color: #af75d7;
+        }
+
+        .social a:active {
+            color: #fff;
+        }
+
+        .social span {
+            font-size: 20px;
+        }
+        .masthead-brand {
+            color: #dddddd;
+        }
+        a.masthead-brand:hover {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body class="text-center">
-  <!-- Loader -->
-  <div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span></span>
-  </div>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="gsregular">
+                <a class="masthead-brand" href="/">StavZDev</a>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="/">Home</a>
+                    <a class="nav-link" href="/projects/">Projects</a>
+                    <a class="nav-link" href="/donate/">Donate</a>
+                </nav>
+            </div>
+        </header>
+        <div>
+            <h1 class="bold" style="color: #dddddd;">StavZDev</h1>
+            <p class="lead regular">16 yo kid | Programmer</p>
+            <br>
+            <p class="social d-flex justify-content-center" style="margin-bottom: 4px;">
+                <a href="https://vk.com/stavzdev" class="mx-3">
+                    <span class="iconify" data-icon="bx:bxl-vk" data-inline="true"></span>
+                </a>
+                <a href="tg://resolve?domain=stavzdev" class="mx-3">
+                    <span class="iconify" data-icon="bx:bxl-telegram" data-inline="true"></span>
+                </a>
+                <a href="https://twitter.com/StavZDev" class="mx-3">
+                    <span class="iconify" data-icon="bx:bxl-twitter" data-inline="true"></span>
+                </a>
+            </p>
+            <p class="social d-flex justify-content-center" style="margin-bottom: 4px;">
+                <a href="https://github.com/StavZ" class="mx-3">
+                    <span class="iconify" data-icon="bx:bxl-github" data-inline="true"></span>
+                </a>
+                <a href="https://stavzdev.xyz/vexond/support" class="mx-3">
+                    <span class="iconify" data-icon="bx:bxl-discord" data-inline="true"></span>
+                </a>
+            </p>
+        </div>
 
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <a href="https://stavzdev.xyz" class="navbar-brand">StavZDev</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="navbar-collapse collapse" id="navbarSupportedContent" style="width: 40px;">
-        <ul class="nav navbar-nav mr-auto navbar-center">
-          <li class="nav-item active">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="navbar-nav"><a href="projects/index.html" class="nav-link">Projects</a></li>
-          <li class="navbar-nav"><a class="nav-link" href="/about/">About</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <footer>
-    <p>Copyright <span class="iconify" data-icon="bx:bx-copyright" data-inline="false"></span> 2020 StavZDev</p>
-  </footer>
+        <footer class="mastfoot mt-auto small">
+            <div class="inner regular">
+                Copyright <span class="iconify" data-icon="ant-design:copyright-circle-outlined"
+                    data-inline="true"></span> 2020 - StavZDev
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
