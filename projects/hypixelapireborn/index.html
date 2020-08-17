@@ -3,9 +3,9 @@
 
 <head>
     <meta name="viewport" content="width=device-width">
-    <title>StavZDev's Website</title>
-    <link rel="icon" href="img/site_icon.png">
-    <link rel="stylesheet" href="style/bootstrap.css">
+    <title>Hypixel API • Reborn</title>
+    <link rel="icon" href="../../img/hypixelapireborn-icon.png">
+    <link rel="stylesheet" href="../../style/bootstrap.css">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -94,40 +94,42 @@
         }
 
         body {
-            background-image: url('img/site-background-4k.png');
-            color: #bbbbbb
+            background: #ffe259;
+            background: -webkit-linear-gradient(to right, #ffa751, #ff761b);
+            background: linear-gradient(to right, #ffa751, #ff761b);
+            color: #ffffff;
         }
 
         a {
-            color: #444444
+            color: #ffffff
         }
 
         a:hover {
-            color: #af75d7;
+            color: #ffc183;
             text-decoration: none;
         }
 
 
         .brand-text {
-            fill: #333;
+            fill: #fff;
         }
 
         .brand-main {
-            fill: #af75d7;
+            fill: #ffc183;
         }
 
         .nav-masthead .nav-link {
             font-weight: 500;
-            color: #9E9E9E;
+            color: #ffffff;
         }
 
         .nav-masthead .active {
-            color: #cacaca;
+            color: #ffffff;
         }
 
         .nav-masthead .nav-link:hover,
         .nav-masthead .nav-link:focus {
-            color: #af75d7;
+            color: #ffc183;
             border-bottom: none;
         }
 
@@ -138,12 +140,12 @@
             height: 2.5rem;
             border-radius: 100%;
             line-height: 2.5rem;
-            color: #bbbbbb;
+            color: #ffffff;
             font-size: 20px;
         }
 
         .social a:hover {
-            color: #af75d7;
+            color: #ffc183;
         }
 
         .social a:active {
@@ -153,11 +155,73 @@
         .social span {
             font-size: 20px;
         }
+
         .masthead-brand {
-            color: #dddddd;
+            color: #ffffff;
         }
+
         a.masthead-brand:hover {
             text-decoration: none;
+        }
+
+        .home {
+            height: 80vh;
+        }
+
+        .home h1 {
+            position: relative;
+            top: 40%;
+            text-align: center;
+        }
+
+        .home p {
+            position: relative;
+            top: 40%;
+            text-align: center;
+        }
+
+        .links a {
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 100%;
+            line-height: 2.5rem;
+            color: #bbbbbb;
+            font-size: 20px;
+        }
+
+        .links a:hover {
+            color: #af75d7;
+        }
+
+        .links a:active {
+            color: #fff;
+        }
+
+        .links span {
+            font-size: 20px;
+        }
+
+        @media (max-width: 720) {
+            * {
+                font-size: -10px
+            }
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        .imgBorder {
+            padding: 15px 15px 0;
+            background-color: #ffa751;
+            box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+            -moz-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+            -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+        }
+        br {
+            margin: 10px;
         }
     </style>
 </head>
@@ -169,45 +233,34 @@
     <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div>
-                <a class="masthead-brand" href="#">StavZDev</a>
+                <a class="masthead-brand" href="#">Hypixel API • Reborn</a>
                 <nav class="nav nav-masthead justify-content-center">
                     <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="/projects">Projects</a>
+                    <a class="nav-link" href="https://github.com/StavZ/hypixel-api-reborn" target="_blank">GitHub</a>
+                    <a class="nav-link" href="https://npmjs.com/package/hypixel-api-reborn" target="_blank">NPM</a>
                 </nav>
             </div>
         </header>
-        <div>
-            <h1 class="bold" style="color: #dddddd;">StavZDev</h1>
-            <p class="lead regular">16 y.o. kid | Programmer</p>
+        <div class="home">
+            <div class="title">
+                <h1 class="bold" style="font-size: 2rem;">Hypixel API • Reborn</h1>
+                <p class="lead regular">User-friendly Hypixel API wrapper for Node.js</p>
+            </div>
             <br>
-            <p class="social d-flex justify-content-center" style="margin-bottom: 4px;">
-                <a href="https://vk.com/stavzdev" class="mx-3">
-                    <span class="iconify" data-icon="bx:bxl-vk" data-inline="true"></span>
-                </a>
-                <a href="tg://resolve?domain=stavzdev" class="mx-3">
-                    <span class="iconify" data-icon="bx:bxl-telegram" data-inline="true"></span>
-                </a>
-                <a href="https://twitter.com/StavZDev" class="mx-3">
-                    <span class="iconify" data-icon="bx:bxl-twitter" data-inline="true"></span>
-                </a>
-            </p>
-            <p class="social d-flex justify-content-center" style="margin-bottom: 4px;">
-                <a href="https://github.com/StavZ" class="mx-3">
-                    <span class="iconify" data-icon="bx:bxl-github" data-inline="true"></span>
-                </a>
-                <a href="https://stavzdev.xyz/vexond/support" class="mx-3">
-                    <span class="iconify" data-icon="bx:bxl-discord" data-inline="true"></span>
-                </a>
-            </p>
+            <h2>Features</h2>
+            <br>
+            <h4>Easiest Installation</h4>
+            <img class="imgBorder" src="../../img/easiest-installation.png" alt="Easiest Installation">
+            <br>
+            <h4>Intellisense Support</h4>
+            <img class="imgBorder" src="../../img/intellisense.png" alt="Intellisense Support">
         </div>
-
         <footer class="mastfoot mt-auto small">
             <div class="inner regular">
                 Copyright <span class="iconify" data-icon="ant-design:copyright-circle-outlined"
                     data-inline="true"></span> 2020 - StavZDev
             </div>
         </footer>
-    </div>
 </body>
 
 </html>
