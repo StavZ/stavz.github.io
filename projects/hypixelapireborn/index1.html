@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Hypixel API • Reborn</title>
+    <link rel="icon" href="../../img/hypixelapireborn-icon.png">
+    <link rel="stylesheet" href="../../style/bootstrap.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        console.log(document.getElementsByClassName('loader-wrapper'))
+        $(window).on("load", () => {
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+    <style>
+        /*! Preloader */
+
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #252525;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .loader {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: relative;
+            border: 4px solid #Fff;
+            animation: loader 2s infinite ease;
+        }
+
+        .loader-inner {
+            vertical-align: top;
+            display: inline-block;
+            width: 100%;
+            background-color: #fff;
+            animation: loader-inner 2s infinite ease-in;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(180deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            75% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes loader-inner {
+            0% {
+                height: 0%;
+            }
+
+            25% {
+                height: 0%;
+            }
+
+            50% {
+                height: 100%;
+            }
+
+            75% {
+                height: 100%;
+            }
+
+            100% {
+                height: 0%;
+            }
+        }
+
+        body {
+            background: #ffe259;
+            background: -webkit-linear-gradient(to right, #ffa751, #ff761b);
+            background: linear-gradient(to right, #ffa751, #ff761b);
+            color: #ffffff;
+        }
+
+        a {
+            color: #ffffff
+        }
+
+        a:hover {
+            color: #ffc183;
+            text-decoration: none;
+        }
+
+
+        .brand-text {
+            fill: #fff;
+        }
+
+        .brand-main {
+            fill: #ffc183;
+        }
+
+        .nav-masthead .nav-link {
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .nav-masthead .active {
+            color: #ffffff;
+        }
+
+        .nav-masthead .nav-link:hover,
+        .nav-masthead .nav-link:focus {
+            color: #ffc183;
+            border-bottom: none;
+        }
+
+        .social a {
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 100%;
+            line-height: 2.5rem;
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .social a:hover {
+            color: #ffc183;
+        }
+
+        .social a:active {
+            color: #fff;
+        }
+
+        .social span {
+            font-size: 20px;
+        }
+
+        .masthead-brand {
+            color: #ffffff;
+        }
+
+        a.masthead-brand:hover {
+            text-decoration: none;
+        }
+
+        .home {
+            height: 80vh;
+        }
+
+        .home h1 {
+            position: relative;
+            top: 40%;
+            text-align: center;
+        }
+
+        .home p {
+            position: relative;
+            top: 40%;
+            text-align: center;
+        }
+
+        .links a {
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 100%;
+            line-height: 2.5rem;
+            color: #bbbbbb;
+            font-size: 20px;
+        }
+
+        .links a:hover {
+            color: #af75d7;
+        }
+
+        .links a:active {
+            color: #fff;
+        }
+
+        .links span {
+            font-size: 20px;
+        }
+
+        @media (max-width: 720) {
+            * {
+                font-size: -10px
+            }
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        .imgBorder {
+            padding: 15px 15px 0;
+            background-color: #ffa751;
+            box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+            -moz-box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+            -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+        }
+        br {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body class="text-center">
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <!-- <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div>
+                <a class="masthead-brand" href="#">Hypixel API • Reborn</a>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="https://github.com/StavZ/hypixel-api-reborn" target="_blank">GitHub</a>
+                    <a class="nav-link" href="https://npmjs.com/package/hypixel-api-reborn" target="_blank">NPM</a>
+                </nav>
+            </div>
+        </header>
+        <div class="home">
+            <div class="title">
+                <h1 class="bold" style="font-size: 2rem;">Hypixel API • Reborn</h1>
+                <p class="lead regular">User-friendly Hypixel API wrapper for Node.js</p>
+            </div>
+            <br>
+            <h2>Features</h2>
+            <br>
+            <h4>Easiest Installation</h4>
+            <img class="imgBorder" src="../../img/easiest-installation.png" alt="Easiest Installation">
+            <h4>Intellisense Support</h4>
+            <img class="imgBorder" src="../../img/intellisense.png" alt="Intellisense Support">
+        </div>
+        <footer class="mastfoot mt-auto small">
+            <div class="inner regular">
+                Copyright <span class="iconify" data-icon="ant-design:copyright-circle-outlined"
+                    data-inline="true"></span> 2020 - StavZDev
+            </div>
+        </footer> -->
+</body>
+
+</html>
