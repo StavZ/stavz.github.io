@@ -1,4 +1,2 @@
 # Website
-https://stavzdev.me
-
-Built with [React](https://reactjs.org/).
+https://stavzdev.xyz

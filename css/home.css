@@ -1,0 +1,66 @@
+h1.title {
+  font-size: clamp(2.5rem, 3vw + 1.5rem, 5rem);
+  color: var(--navbar-text-color);
+  margin-top: 10px;
+}
+
+p.info {
+  color: var(--navbar-text-color);
+  margin: 20px;
+}
+
+
+.links {
+  padding-top: 20px;
+  display: inline;
+}
+
+.links a {
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  color: var(--navbar-text-color);
+  border-radius: 20px;
+  background-color: var(--navbar-bg-color);
+  line-height: 2rem;
+  text-align: center;
+  box-shadow: 0px 1px 2px black
+}
+
+.links a:hover {
+  box-shadow: 0px 2px 3px black !important;
+}
+
+.link {
+  transition: .5s;
+}
+
+a.spotify:hover {
+  color: #1db954 !important;
+}
+
+a.vk:hover {
+  color: #2787f5 !important;
+}
+
+a.twitter:hover {
+  color: #1da1f2 !important;
+}
+
+a.instagram:hover {
+  color: #e1306c !important;
+}
+
+a.tg:hover {
+  color: #28a8e9 !important;
+}
+
+a.discord:hover {
+  color: #404eed !important;
+}
+
+a.github:hover {
+  color: white !important;
+}
