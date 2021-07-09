@@ -1,2 +1,2 @@
 # Website
-https://stavzdev.xyz
+https://stavzdev.me
