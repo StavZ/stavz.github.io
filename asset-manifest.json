@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/stavz.github.io/static/css/main.3533d7d3.chunk.css",
-    "main.js": "/stavz.github.io/static/js/main.d03a9906.chunk.js",
-    "main.js.map": "/stavz.github.io/static/js/main.d03a9906.chunk.js.map",
-    "runtime-main.js": "/stavz.github.io/static/js/runtime-main.a589b996.js",
-    "runtime-main.js.map": "/stavz.github.io/static/js/runtime-main.a589b996.js.map",
-    "static/js/2.d0cba81e.chunk.js": "/stavz.github.io/static/js/2.d0cba81e.chunk.js",
-    "static/js/2.d0cba81e.chunk.js.map": "/stavz.github.io/static/js/2.d0cba81e.chunk.js.map",
-    "index.html": "/stavz.github.io/index.html",
-    "static/css/main.3533d7d3.chunk.css.map": "/stavz.github.io/static/css/main.3533d7d3.chunk.css.map",
-    "static/js/2.d0cba81e.chunk.js.LICENSE.txt": "/stavz.github.io/static/js/2.d0cba81e.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.3533d7d3.chunk.css",
+    "main.js": "/static/js/main.d03a9906.chunk.js",
+    "main.js.map": "/static/js/main.d03a9906.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0a5c1a94.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0a5c1a94.js.map",
+    "static/js/2.d0cba81e.chunk.js": "/static/js/2.d0cba81e.chunk.js",
+    "static/js/2.d0cba81e.chunk.js.map": "/static/js/2.d0cba81e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.3533d7d3.chunk.css.map": "/static/css/main.3533d7d3.chunk.css.map",
+    "static/js/2.d0cba81e.chunk.js.LICENSE.txt": "/static/js/2.d0cba81e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a589b996.js",
+    "static/js/runtime-main.0a5c1a94.js",
     "static/js/2.d0cba81e.chunk.js",
     "static/css/main.3533d7d3.chunk.css",
     "static/js/main.d03a9906.chunk.js"
