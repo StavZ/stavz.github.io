@@ -39,3 +39,6 @@
   border-bottom: 0.13em solid var(--ls-color);
 }
 </style>
+<script>
+  console.log(typeof process.env.MONGO)
+</script>
