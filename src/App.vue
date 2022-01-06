@@ -40,5 +40,5 @@
 }
 </style>
 <script>
-  console.log(typeof process.env.MONGO)
+  console.log(typeof process.env.MONGO);
 </script>

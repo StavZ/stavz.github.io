@@ -1,7 +1,4 @@
 <script>
-import dotenv from 'dotenv';
-dotenv.config();
-console.log(typeof process.env.MONGO)
 const json = (res) => res.json();
 const noop = () => {};
 const data = {
