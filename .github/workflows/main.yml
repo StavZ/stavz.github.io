@@ -1,25 +1,25 @@
 name: Deploy to GitHub Pages
 on:
-      push:
-        branches:
-          - master
+  push:
+    branches:
+      - master
 jobs:
-      build-and-deploy:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Checkout
-          uses: actions/checkout@v1
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-        - name: Build
-          run: |
-            yarn install
-            yarn build
-          env:
-            MONGO: ${{ secrets.MONGO }}
+      - name: Build
+        run: |
+          yarn install
+          yarn build
+        env:
+          MONGO: ${{ secrets.MONGO }}
 
-        - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@releases/v3
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
-            BRANCH: gh-pages
-            FOLDER: dist
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
+          BRANCH: gh-pages
+          FOLDER: dist
