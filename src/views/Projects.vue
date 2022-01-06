@@ -6,6 +6,7 @@ const data = {
   stars: "...",
   contributors: "...",
   version: "...",
+  users: "...",
   fetching: false,
 };
 
@@ -23,7 +24,8 @@ export default {
       if (this.fetching) return;
       this.fetching = true;
 
-      const [downloads, stars, contributors, meta] = await Promise.all([
+      const [users, downloads, stars, contributors, meta] = await Promise.all([
+        new Promise((res, rej) => res(300)),
         fetch(
           "https://api.npmjs.org/downloads/range/2013-08-21:2100-08-21/hypixel-api-reborn"
         ).then(json, noop),
@@ -38,6 +40,9 @@ export default {
         ).then(json, noop),
       ]);
 
+      if (users) {
+        this.users = `${users}+`;
+      }
       if (downloads) {
         this.downloads = 0;
         for (const item of downloads.downloads)
@@ -122,7 +127,7 @@ export default {
       <div class="stats">
         <div class="users s-item" title="users">
           <span class="iconify" data-icon="gridicons:multiple-users"></span>
-          300+
+          {{ users }}
         </div>
         <div class="version s-item" title="version">
           <span class="iconify" data-icon="system-uicons:version"></span>
