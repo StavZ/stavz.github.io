@@ -5,7 +5,8 @@ const data = {
   downloads: "...",
   stars: "...",
   contributors: "...",
-  version: "...",
+  botVersion: "...",
+  harVersion: "...",
   users: "...",
   fetching: false,
 };
@@ -24,32 +25,35 @@ export default {
       if (this.fetching) return;
       this.fetching = true;
 
-      const [users, downloads, stars, contributors, meta] = await Promise.all([
-        new Promise((res, rej) => res(300)),
-        fetch(
-          "https://api.npmjs.org/downloads/range/2013-08-21:2100-08-21/hypixel-api-reborn"
-        ).then(json, noop),
-        fetch(
-          "https://api.github.com/repos/hypixel-api-reborn/hypixel-api-reborn"
-        ).then(json, noop),
-        fetch(
-          "https://api.github.com/repos/hypixel-api-reborn/hypixel-api-reborn/stats/contributors"
-        ).then(json, noop),
-        fetch(
-          "https://raw.githubusercontent.com/StavZ/timetable-telegram-bot/master/package.json"
-        ).then(json, noop),
-      ]);
+      const [users, downloads, stars, contributors, stbmeta, harmeta] =
+        await Promise.all([
+          new Promise((res, rej) => res(300)),
+          fetch(
+            "https://api.npmjs.org/downloads/range/2013-08-21:2100-08-21/hypixel-api-reborn"
+          ).then(json, noop),
+          fetch(
+            "https://api.github.com/repos/hypixel-api-reborn/hypixel-api-reborn"
+          ).then(json, noop),
+          fetch(
+            "https://api.github.com/repos/hypixel-api-reborn/hypixel-api-reborn/stats/contributors"
+          ).then(json, noop),
+          fetch(
+            "https://raw.githubusercontent.com/StavZ/timetable-telegram-bot/master/package.json"
+          ).then(json, noop),
+          fetch(
+            "https://raw.githubusercontent.com/Hypixel-API-Reborn/hypixel-api-reborn/master/package.json"
+          ).then(json, noop),
+        ]);
 
-      if (users) {
-        this.users = `${users}+`;
-      }
+      if (users) this.users = `${users}+`;
       if (downloads) {
         this.downloads = 0;
         for (const item of downloads.downloads)
           this.downloads += item.downloads;
         this.downloads = `${Math.floor(this.downloads / 1000)}k`;
       }
-      if (meta) this.version = `v${meta.version}`;
+      if (stbmeta) this.botVersion = `v${stbmeta.version}`;
+      if (harmeta) this.harVersion = `v${harmeta.version}`;
       if (stars) this.stars = stars.stargazers_count.toLocaleString();
       if (contributors)
         this.contributors = contributors.length.toLocaleString();
@@ -70,6 +74,10 @@ export default {
         wrapper for Node.js.
       </p>
       <div class="stats">
+        <div class="version s-item" title="downloads">
+          <span class="iconify" data-icon="system-uicons:version"></span>
+          {{ harVersion }}
+        </div>
         <div class="downloads s-item" title="downloads">
           <span class="iconify" data-icon="bx:bxs-download"></span>
           {{ downloads }}
@@ -119,19 +127,19 @@ export default {
       </div>
     </div>
     <div class="project-item">
-      <h3 class="titl">Schedule Telegram Bot</h3>
+      <h3 class="titl">Timetable Telegram Bot</h3>
       <p class="desc">
         A Telegram bot that automatically sends the class timetable from my
         college website.
       </p>
       <div class="stats">
+        <div class="version s-item" title="version">
+          <span class="iconify" data-icon="system-uicons:version"></span>
+          {{ botVersion }}
+        </div>
         <div class="users s-item" title="users">
           <span class="iconify" data-icon="gridicons:multiple-users"></span>
           {{ users }}
-        </div>
-        <div class="version s-item" title="version">
-          <span class="iconify" data-icon="system-uicons:version"></span>
-          {{ version }}
         </div>
       </div>
       <div class="links">
