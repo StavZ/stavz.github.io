@@ -143,7 +143,7 @@ a.site:hover {
 a.discord:hover {
   color: #404eed !important;
 }
-a.youtube:hover: {
+a.youtube:hover {
   color: #ff0000 !important;
 }
 </style>
