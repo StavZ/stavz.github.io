@@ -59,6 +59,17 @@ const age = moment.duration(now.format("x") - bd.format("x")).years();
           data-inline="true"
         ></span>
       </a>
+      <a
+        href="https://www.youtube.com/channel/UCQcOYjpXiDEWpb34eBtObtQ/"
+        target="_blank"
+        class="youtube"
+      >
+        <span
+          class="iconify"
+          data-icon="ant-design:youtube-filled"
+          data-inline="true"
+        ></span>
+      </a>
     </div>
   </div>
 </template>
@@ -131,5 +142,8 @@ a.site:hover {
 }
 a.discord:hover {
   color: #404eed !important;
+}
+a.youtube:hover: {
+  color: #ff0000 !important;
 }
 </style>
