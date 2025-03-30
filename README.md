@@ -1,1 +1,1 @@
-https://stavz.github.io
+https://stavzdev.ru
