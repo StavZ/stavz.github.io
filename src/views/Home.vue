@@ -13,9 +13,6 @@ const age = moment.duration(now.format("x") - bd.format("x")).years();
       }}{{ age < 18 ? " kid" : "" }} • Node.js Developer
     </p>
     <div class="links noselect">
-      <a href="https://vk.com/stavzdev" target="_blank" class="vk">
-        <span class="iconify" data-icon="bx:bxl-vk" data-inline="true"></span>
-      </a>
       <a href="tg://resolve?domain=stavzdev" target="_blank" class="tg">
         <span
           class="iconify"
