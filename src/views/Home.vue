@@ -27,14 +27,25 @@ const age = moment.duration(now.format("x") - bd.format("x")).years();
           data-inline="true"
         ></span>
       </a>
-      <a href="https://twitter.com/StavZDev" target="_blank" class="twitter">
+      <a
+        href="https://www.npmjs.com/~stavz"
+        target="_blank"
+        class="npm"
+      >
+        <span
+          class="iconify"
+          data-icon="iconoir:npm"
+          data-inline="true"
+        ></span>
+      </a>
+      <!-- <a href="https://twitter.com/StavZDev" target="_blank" class="twitter">
         <span
           class="iconify"
           data-icon="bx:bxl-twitter"
           data-inline="true"
         ></span>
-      </a>
-      <a
+      </a> -->
+      <!-- <a
         href="https://instagram.com/stavzdev.inst"
         target="_blank"
         class="inst"
@@ -44,7 +55,7 @@ const age = moment.duration(now.format("x") - bd.format("x")).years();
           data-icon="bx:bxl-instagram"
           data-inline="true"
         ></span>
-      </a>
+      </a> -->
       <a
         href="https://open.spotify.com/user/acuhb7unxfwyqpagif9bks2ee"
         target="_blank"
@@ -94,22 +105,24 @@ const age = moment.duration(now.format("x") - bd.format("x")).years();
   margin-right: 0.4rem;
   margin-left: 0.4rem;
   display: inline-block;
-  width: 65px;
-  height: 65px;
+  width: 45px;
+  height: 45px;
   border-radius: 20px;
   background-color: var(--dark-theme-bg);
-  line-height: 2rem;
+  line-height: 3rem;
+  font-size: 25px;
   text-align: center;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
 }
 .links a span {
-  height: 10px;
+  height: 60px;
 }
 .links a {
   transition: 0.5s;
 }
 a.spotify:hover {
   color: #1db954 !important;
+  box-shadow: 0px 0px 10px rgba(68, 146, 79, 0.7);
 }
 
 a.vk:hover {
@@ -118,29 +131,37 @@ a.vk:hover {
 
 a.twitter:hover {
   color: #1da1f2 !important;
+  box-shadow: 0px 5px 5px rgba(19, 19, 24, 0.7);
 }
 
 a.inst:hover {
   color: #e1306c !important;
+  box-shadow: 0px 0px 10px rgba(150, 68, 118, 0.7);
 }
 
 a.tg:hover {
   color: #28a8e9 !important;
+  box-shadow: 0px 0px 10px rgba(62, 128, 148, 0.7);
 }
 
 a.github:hover {
   color: white !important;
+  box-shadow: 0px 0px 10px rgba(134, 134, 134, 0.7);
 }
 a.npm:hover {
   color: #c13534 !important;
+  box-shadow: 0px 0px 10px rgba(155, 46, 46, 0.7);
 }
 a.site:hover {
   color: #1c70e7 !important;
+  box-shadow: 0px 5px 5px rgba(19, 19, 24, 0.7);
 }
 a.discord:hover {
   color: #404eed !important;
+  box-shadow: 0px 5px 5px rgba(19, 19, 24, 0.7);
 }
 a.youtube:hover {
   color: #ff0000 !important;
+  box-shadow: 0px 0px 10px rgba(143, 30, 30, 0.7);
 }
 </style>
