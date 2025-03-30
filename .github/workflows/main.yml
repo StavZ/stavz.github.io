@@ -20,7 +20,7 @@ jobs:
           node-version: 17
       - run: |
           export NODE_OPTIONS=--openssl-legacy-provider yarn install
-          export NODE_OPTIONS=--openssl-legacy-provider yarn build
+          yarn build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
