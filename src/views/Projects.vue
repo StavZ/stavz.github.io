@@ -27,7 +27,7 @@ export default {
 
       const [users, downloads, stars, contributors, stbmeta, harmeta] =
         await Promise.all([
-          new Promise((res, rej) => res(300)),
+          new Promise((res, rej) => res(500)),
           fetch(
             "https://api.npmjs.org/downloads/range/2013-08-21:2100-08-21/hypixel-api-reborn"
           ).then(json, noop),
