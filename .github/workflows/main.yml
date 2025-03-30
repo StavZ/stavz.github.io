@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: 17
       - run: |
-          yarn install
-          yarn build
+          export NODE_OPTIONS=--openssl-legacy-provider yarn install
+          export NODE_OPTIONS=--openssl-legacy-provider yarn build
         env:
           MONGO: ${{ secrets.MONGO }}
 
